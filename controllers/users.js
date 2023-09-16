@@ -15,9 +15,7 @@ module.exports.getCurrentUser = (req, res, next) => {
       res.send({ data: user });
     })
     .catch((error) => {
-      if (error instanceof mongoose.Error.CastError) {
-        next(new CastError('Передан неверный ID'));
-      } else if (error instanceof mongoose.Error.DocumentNotFoundError) {
+      if (error instanceof mongoose.Error.DocumentNotFoundError) {
         next(new NotFoundError('Запрашиваемый пользователь не найден'));
       } else {
         next(error);
