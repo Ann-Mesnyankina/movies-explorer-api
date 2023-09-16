@@ -1,7 +1,7 @@
 # movies-explorer-api
 
 # Диплом бэкенд
-# Ссылка на домен [https://github.com/Ann-Mesnyankina/express-mesto-gha.git](https://api.movies.ann.nomoredomainsrocks.ru/)
+# Ссылка на домен https://api.movies.ann.nomoredomainsrocks.ru
 
 
 ## Директории
