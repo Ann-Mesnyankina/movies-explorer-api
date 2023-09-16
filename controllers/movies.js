@@ -5,7 +5,7 @@ const CastError = require('../errors/cast-err');
 const ForbiddenError = require('../errors/forbidden-err');
 
 module.exports.getAllMovies = (req, res, next) => {
-  Movie.find({})
+  Movie.find({ owner: req.user._id })
     .then((movies) => res.send({ data: movies }))
     .catch((error) => next(error));
 };
